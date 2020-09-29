@@ -24,16 +24,18 @@ end
 def main
     # calc_options hash has key:value pairs of
     # input option:['string response', method_to_call]
-    calc_options = {1=> ['multiplied by',
-                        method(:multiply)],
-                    2=> ['added to',
-                        method(:add)],
-                    3=> ['subtracted by',
-                        method(:subtract)],
-                    4=> ['divided by',
-                        method(:divide)],
-                    5=> ['mod',
-                        method(:mod)]}
+    calc_options = {
+        1 => ['multiplied by',
+              method(:multiply)],
+        2 => ['added to',
+              method(:add)],
+        3 => ['subtracted by',
+              method(:subtract)],
+        4 => ['divided by',
+              method(:divide)],
+        5 => ['mod',
+              method(:mod)]
+        }
 
     # start of output
     puts "Simple Calculator"
