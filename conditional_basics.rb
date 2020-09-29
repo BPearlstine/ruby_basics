@@ -21,7 +21,7 @@ def mod(first_num, second_num)
     first_num.to_f % second_num.to_f
 end
 
-def main():
+def main
     # calc_options hash has key:value pairs of
     # input option:['string response', method_to_call]
     calc_options = {1=> ['multiplied by',
@@ -74,3 +74,6 @@ def main():
             break
         end
     end
+end
+
+main()
