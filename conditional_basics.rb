@@ -44,10 +44,10 @@ user_entry = gets.chomp.to_i
 
 puts "You selected #{user_entry}"
 
-if user_entry < 6
+if user_entry < calc_options.length
     puts "The first number #{calc_options[user_entry][0]} the second number is: #{calc_options[user_entry][1].call(first_number, second_number)}"
 else
-    puts "Sorry that is not an option" 
+    puts "Sorry that is not an option"
 end
 
 
