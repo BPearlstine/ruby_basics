@@ -20,14 +20,13 @@ def auth_user(username, password, attempts)
         if user[:username] == username && user[:password] == password
             puts "Welcome"
             return attempts, true
-        else
-            # on failure increment attempts
-            puts "Sorry these credentials are incorrect"
-            attempts += 1
-            return attempts, false
         end
     end
-
+    # on failure increment attempts
+    puts "Sorry these credentials are incorrect"
+    attempts += 1
+    return attempts, false
+    
     # my first solution
     # -----------------------
     # create hash of data
@@ -56,7 +55,7 @@ def main
     # while we don't want to quit and haven't used up our 4 attempts
     # keep trying to get in
     while quit != 'y' && attempts != 4
-        puts "Welcom to the authenticator"
+        puts "Welcome to the authenticator"
         25.times {print "-"}
         puts
 
