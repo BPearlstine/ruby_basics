@@ -39,34 +39,37 @@ def main():
 
     # as long as the user_entry is not six allow them to continue
     # to do maths
-    while user_entry != 6:
-        print()
-        # have user select which method will be called
-        # and cast to int
-        print("What do you want to do?")
-        user_entry = int(input("Enter 1 for multiply, 2 for addition, 3 for subtraction, 4 for division, 5 for mod "))
+    try:
+        while user_entry != 6:
+            print()
+            # have user select which method will be called
+            # and cast to int
+            print("What do you want to do?")
+            user_entry = int(input("Enter 1 for multiply, 2 for addition, 3 for subtraction, 4 for division, 5 for mod "))
 
-        # display selection
-        print("You selected {}".format(user_entry))
+            # display selection
+            print("You selected {}".format(user_entry))
 
-        # check that the number entered by the user is within the
-        # possible options (length of hash + 1), if not lettem know
+            # check that the number entered by the user is within the
+            # possible options (length of hash + 1), if not lettem know
 
-        if user_entry < len(calc_options) + 1 and user_entry != 0:
-            # get first number and cast to int
-            first_number = int(input("Please enter your first number "))
-            # get second number and cast to int
-            second_number = int(input("Please enter your second number "))
-            # using the input as the key, first index of the list in the value is
-            # added to the string, second index of the list is called and then
-            # added to the string.
-            rtrn_string = "The first number {} the second number is: {}"
-            print(rtrn_string.format(calc_options[user_entry][0], calc_options[user_entry][1](first_number, second_number)))
-        elif user_entry == 6:
-            print("Goodbye")
-        else:
-            print("Sorry that is not an option")
-            break
+            if user_entry < len(calc_options) + 1 and user_entry != 0:
+                # get first number and cast to int
+                first_number = int(input("Please enter your first number "))
+                # get second number and cast to int
+                second_number = int(input("Please enter your second number "))
+                # using the input as the key, first index of the list in the value is
+                # added to the string, second index of the list is called and then
+                # added to the string.
+                rtrn_string = "The first number {} the second number is: {}"
+                print(rtrn_string.format(calc_options[user_entry][0], calc_options[user_entry][1](first_number, second_number)))
+            elif user_entry == 6:
+                print("Goodbye")
+            else:
+                print("Sorry that is not an number is not option")
+                break
+    except:
+        print("Sorry that was an invalid input")
 
 if __name__ == "__main__":
     main()
